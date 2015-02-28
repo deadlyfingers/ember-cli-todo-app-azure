@@ -1,6 +1,6 @@
-# Client
+# ember-cli Todo app
 
-ToDo app example using ember-cli and Azure Mobile Services.
+Todo app example using ember-cli and Azure Mobile Services.
 
 ## Prerequisites
 
