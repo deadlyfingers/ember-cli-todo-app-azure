@@ -1,0 +1,46 @@
+body {
+	font-family: sans-serif;
+	cursor: default;
+	margin: 0;
+	padding: 0;
+	-webkit-user-select: none;
+}
+
+header {
+	margin: 10px;
+}
+
+span {
+	color: #000; /* default (incompleted todos) */
+}
+
+.completed, .true {
+	color: #999; /* completed tasks are greyed and striked out */
+	text-decoration: line-through;
+}
+button {
+	float: right;
+}
+
+ol {
+	list-style-position: inside;
+	margin: 0;
+	padding: 0;
+	color: #999;
+}
+
+li {
+	padding: 10px;
+}
+
+li:nth-child(odd) {
+	background:#fcfcfc;
+}
+
+li:nth-child(even) {
+	background:#f9f9f9;
+}
+
+label {
+	cursor: pointer;
+}

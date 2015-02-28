@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'client',
+    modulePrefix: 'ember-cli-todoapp-azure',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -12,7 +12,15 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' *.azure-mobile.net",
+      'font-src': "'self'",
+      'connect-src': "'self' *.azure-mobile.net",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
+      'media-src': "'self'"
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

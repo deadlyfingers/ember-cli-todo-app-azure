@@ -1,7 +1,7 @@
 {
-  "name": "client",
+  "name": "ember-cli-todoapp-azure",
   "version": "0.0.0",
-  "description": "Small description for client goes here",
+  "description": "ToDo app example using ember-cli and Azure Mobile Services",
   "private": true,
   "directories": {
     "doc": "doc",

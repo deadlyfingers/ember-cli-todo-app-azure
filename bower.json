@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "ember-cli-todo-app-azure",
   "dependencies": {
     "jquery": "^1.11.1",
     "ember": "1.10.0",

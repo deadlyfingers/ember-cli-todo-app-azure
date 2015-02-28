@@ -1,0 +1,22 @@
+<h3>Todo: {{text}}</h3>
+
+<header>
+<form>
+{{input value=text type="text" name="text" placeholder="Todo" autofocus="autofocus"}}
+<input type="submit" value="Add" {{action 'add'}} {{bind-attr disabled=isDisabled}} />
+</form>
+</header>
+
+<main>
+<ol>
+{{#each item in model}}
+	<li>
+		<label {{action 'toggleComplete' item}}>
+			<input type="checkbox" disabled {{bind-attr checked=item.completed}} />
+			<span {{bind-attr class="item.completed"}}>{{item.text}}</span>
+		</label>
+		<button {{action 'delete' item}} >Delete</button>
+	</li>
+{{/each}}
+</ol>
+</main>

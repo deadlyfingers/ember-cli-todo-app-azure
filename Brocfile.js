@@ -4,6 +4,11 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
+app.import({
+	development: 'vendor/MobileServices.Web-1.2.5.js',
+	production:  'vendor/MobileServices.Web-1.2.5.min.js'
+});
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
