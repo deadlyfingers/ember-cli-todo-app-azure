@@ -34,7 +34,7 @@ var azureService = Ember.Object.extend({
 		function onComplete(fulfilled){
       // NB: use Ember's removeObject to respect KVO!
 			model.removeObject(item);
-			console.log("deleted item (soft):" + " model:" + model.length);
+			console.log("deleted item:" + " model:" + model.length);
 			return fulfilled;
 		}
 		function onError(error){
@@ -58,12 +58,21 @@ var azureService = Ember.Object.extend({
 
 //  creates static properties and methods for the class
 azureService.reopenClass({
-	mobileServiceClient : new WindowsAzure.MobileServiceClient(
-				"https://deadlyfingers.azure-mobile.net/",
-				"aBLuTadsNEdhtRhRWFTBFEcvTnJkho20"),
+	APPLICATION_URL : "https://___.azure-mobile.net/",
+  APPLICATION_KEY : "",
+  mobileServiceClient : null,
 
 	client : function(){
-		return azureService.mobileServiceClient;
+    if(this.APPLICATION_URL == "" || this.APPLICATION_KEY == "")
+    {
+      throw "\nPlease configure your Azure Mobile Service URL & Application KEY (app/services/azure.js 61-62)";
+    } else {
+      if (this.mobileServiceClient == null) {
+        console.log("Creating Mobile Service Client...");
+        this.mobileServiceClient = new WindowsAzure.MobileServiceClient(this.APPLICATION_URL, this.APPLICATION_KEY)
+      }
+      return this.mobileServiceClient;
+    }
 	}
 
 });

@@ -6,7 +6,7 @@ Todo app example using ember-cli and Azure Mobile Services.
 ## Getting started with Azure Mobile Services
 * Create [Azure Mobile Service](http://bit.ly/azureportal)
 * Create 'TodoItem' table.
-* Copy & paste your Azure Mobile Service connection strings into 'app/services/azure.js' lines 62,63.
+* Copy & paste your Azure Mobile Service connection strings into 'app/services/azure.js' lines 61-62.
 
 ## Prerequisites
 
