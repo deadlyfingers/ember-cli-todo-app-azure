@@ -63,13 +63,12 @@ azureService.reopenClass({
   mobileServiceClient : null,
 
 	client : function(){
-    if(this.APPLICATION_URL == "" || this.APPLICATION_KEY == "")
-    {
+    if(this.APPLICATION_URL === "" || this.APPLICATION_KEY === "") {
       throw "\nPlease configure your Azure Mobile Service URL & Application KEY (app/services/azure.js 61-62)";
     } else {
       if (this.mobileServiceClient == null) {
         console.log("Creating Mobile Service Client...");
-        this.mobileServiceClient = new WindowsAzure.MobileServiceClient(this.APPLICATION_URL, this.APPLICATION_KEY)
+        this.mobileServiceClient = new WindowsAzure.MobileServiceClient(this.APPLICATION_URL, this.APPLICATION_KEY);
       }
       return this.mobileServiceClient;
     }
