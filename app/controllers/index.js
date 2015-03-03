@@ -27,11 +27,11 @@ export default Ember.Controller.extend({
 				text: text,
 				completed: false
 			};
-			return service.insert(table,item,this.model);
+			return service.insert(table, item, this.model);
 		},
 
 		delete: function(item){
-			return service.del(table,item,this.model);
+			return service.del(table, item, this.model);
 		},
 
 		toggleComplete: function(object){
@@ -40,7 +40,7 @@ export default Ember.Controller.extend({
 			} else {
 				Ember.set(object, 'completed', false);
 			}
-			return service.update(table,object,this.model);
+			return service.update(table, object);
 		}
   }
 

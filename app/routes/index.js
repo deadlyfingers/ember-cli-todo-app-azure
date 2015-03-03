@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   init: function(){
     this._super();
     service = this.get('azureService');
-    table = table = 'TodoItem';
+    table = 'TodoItem';
   },
 
   model: function(){
